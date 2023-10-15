@@ -39,4 +39,19 @@ public class ToyManager {
 
         return null;
     }
+    /**
+     * Изменяет вес у игрушки с заданным ID
+     * @param id - ID игрушки
+     * @param weight - новый вес игрушки
+     */
+    public void changeToyWeight(int id, double weight) {
+        for (Toy toy : toys) {
+            if (toy.getId() == id) {
+                toy.setWeight(weight);
+                return;
+            }
+        }
+        System.out.println("Игрушка с ID " + id + " не найдена.");
+    }
+
 }
